@@ -1,16 +1,19 @@
 {
   "dependencies": {
-    "vue-template-compiler": "^2.7.8"
+    "vue-template-compiler": "^2.7.8",
+    "vuepress-plugin-serve": "^2.0.4"
   },
   "name": "notes",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.7"
+  },
   "scripts": {
     "docs:dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs",
-    "deploy":"bash deploy.sh"
+    "deploy": "bash deploy.sh"
   },
   "repository": {
     "type": "git",

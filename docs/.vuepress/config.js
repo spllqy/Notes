@@ -7,7 +7,7 @@ module.exports = {
         ['mate', { name: 'author', content: 'nulixuejishu' }],
         ['mate', { name: 'keywords', content: '学习笔记、Java笔记、MySQL笔记' }],
       ],
-    plugins:[
+    plugins: [
         ['@vuepress/back-to-top'],
         ['@vuepress/last-updated'],  
         ['@vuepress/vuepress-plugin-serve'],
