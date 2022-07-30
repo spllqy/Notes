@@ -1,3 +1,6 @@
+来自:[路途博客](https://dhc.pythonanywhere.com/entry/share/?key=3ad29aad765a2b98b2b2a745d71bef715507ee9db8adbec98257bac0ad84cbe4#h1-u57FAu7840u7BC7)
+- - - 
+
 # MySQL 基础篇
 
 ## 通用语法及分类

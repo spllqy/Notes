@@ -1,6 +1,6 @@
 module.exports = {
     base:"/Notes/",
-    title: 'My Notes',
+    title: 'Notes',
     description:"nulixuejishu的笔记",
     head: [
         ['link', { rel: 'icon', href: '/assets/img/ico.ico' }],
