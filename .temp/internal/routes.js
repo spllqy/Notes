@@ -9,6 +9,14 @@ import GlobalLayout from "C:\\Users\\sunpi\\AppData\\Local\\Yarn\\Data\\global\\
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
+    name: "v-211d55ee",
+    path: "/Java/IO/IO.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-211d55ee").then(next)
+    },
+  },
+  {
     name: "v-386ba049",
     path: "/Java/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80.html",
     component: GlobalLayout,
@@ -39,30 +47,6 @@ export const routes = [
   {
     path: "/Java/多线程/多线程.html",
     redirect: "/Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B.html"
-  },
-  {
-    name: "v-211d55ee",
-    path: "/Java/IO/IO.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-211d55ee").then(next)
-    },
-  },
-  {
-    name: "v-30273973",
-    path: "/Java/%E5%B8%B8%E7%94%A8API/%E5%B8%B8%E7%94%A8API.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-30273973").then(next)
-    },
-  },
-  {
-    path: "/Java/常用API/常用API.html",
-    redirect: "/Java/%E5%B8%B8%E7%94%A8API/%E5%B8%B8%E7%94%A8API.html"
-  },
-  {
-    path: "/Java/常用API/常用API.html",
-    redirect: "/Java/%E5%B8%B8%E7%94%A8API/%E5%B8%B8%E7%94%A8API.html"
   },
   {
     name: "v-75e26aa9",
@@ -97,20 +81,20 @@ export const routes = [
     redirect: "/Java/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.html"
   },
   {
-    name: "v-2d297d7e",
-    path: "/Java/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93.html",
+    name: "v-aa2f5e2e",
+    path: "/Java/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-2d297d7e").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-aa2f5e2e").then(next)
     },
   },
   {
-    path: "/Java/数据库/数据库.html",
-    redirect: "/Java/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93.html"
+    path: "/Java/类加载、反射/类加载、反射.html",
+    redirect: "/Java/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84.html"
   },
   {
-    path: "/Java/数据库/数据库.html",
-    redirect: "/Java/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93.html"
+    path: "/Java/类加载、反射/类加载、反射.html",
+    redirect: "/Java/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84.html"
   },
   {
     name: "v-486a6a6e",
@@ -129,20 +113,52 @@ export const routes = [
     redirect: "/Java/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html"
   },
   {
-    name: "v-aa2f5e2e",
-    path: "/Java/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84.html",
+    name: "v-30273973",
+    path: "/Java/%E5%B8%B8%E7%94%A8API/%E5%B8%B8%E7%94%A8API.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-aa2f5e2e").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-30273973").then(next)
     },
   },
   {
-    path: "/Java/类加载、反射/类加载、反射.html",
-    redirect: "/Java/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84.html"
+    path: "/Java/常用API/常用API.html",
+    redirect: "/Java/%E5%B8%B8%E7%94%A8API/%E5%B8%B8%E7%94%A8API.html"
   },
   {
-    path: "/Java/类加载、反射/类加载、反射.html",
-    redirect: "/Java/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E3%80%81%E5%8F%8D%E5%B0%84.html"
+    path: "/Java/常用API/常用API.html",
+    redirect: "/Java/%E5%B8%B8%E7%94%A8API/%E5%B8%B8%E7%94%A8API.html"
+  },
+  {
+    name: "v-2d297d7e",
+    path: "/Java/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-2d297d7e").then(next)
+    },
+  },
+  {
+    path: "/Java/数据库/数据库.html",
+    redirect: "/Java/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93.html"
+  },
+  {
+    path: "/Java/数据库/数据库.html",
+    redirect: "/Java/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93.html"
+  },
+  {
+    name: "v-128749e9",
+    path: "/Java/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-128749e9").then(next)
+    },
+  },
+  {
+    path: "/Java/网络编程/网络编程.html",
+    redirect: "/Java/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html"
+  },
+  {
+    path: "/Java/网络编程/网络编程.html",
+    redirect: "/Java/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html"
   },
   {
     name: "v-1f3144e9",
@@ -173,6 +189,14 @@ export const routes = [
     redirect: "/"
   },
   {
+    name: "v-92fc7c3e",
+    path: "/about.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-92fc7c3e").then(next)
+    },
+  },
+  {
     name: "v-70a0c66e",
     path: "/Java/%E9%9B%86%E5%90%88/%E9%9B%86%E5%90%88.html",
     component: GlobalLayout,
@@ -189,22 +213,6 @@ export const routes = [
     redirect: "/Java/%E9%9B%86%E5%90%88/%E9%9B%86%E5%90%88.html"
   },
   {
-    name: "v-128749e9",
-    path: "/Java/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-128749e9").then(next)
-    },
-  },
-  {
-    path: "/Java/网络编程/网络编程.html",
-    redirect: "/Java/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html"
-  },
-  {
-    path: "/Java/网络编程/网络编程.html",
-    redirect: "/Java/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html"
-  },
-  {
     name: "v-3d8a75e0",
     path: "/MySQL/MySQL%E5%9F%BA%E7%A1%80%E7%AF%87.html",
     component: GlobalLayout,
@@ -219,14 +227,6 @@ export const routes = [
   {
     path: "/MySQL/MySQL基础篇.html",
     redirect: "/MySQL/MySQL%E5%9F%BA%E7%A1%80%E7%AF%87.html"
-  },
-  {
-    name: "v-92fc7c3e",
-    path: "/about.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-92fc7c3e").then(next)
-    },
   },
   {
     path: '*',
