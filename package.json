@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "vue-template-compiler": "^2.7.8"
+  },
+  "name": "notes",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "docs:dev": "vuepress dev docs --temp .temp",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spllqy/Notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spllqy/Notes/issues"
+  },
+  "homepage": "https://github.com/spllqy/Notes#readme"
+}
