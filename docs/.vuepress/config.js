@@ -9,8 +9,7 @@ module.exports = {
       ],
     plugins: [
         ['@vuepress/back-to-top'],
-        ['@vuepress/last-updated'],  
-        ['@vuepress/vuepress-plugin-serve'],
+        ['@vuepress/last-updated'],
     ],
     themeConfig: {
       lastUpdated: 'Last Updated',
