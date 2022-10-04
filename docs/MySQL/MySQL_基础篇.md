@@ -18,12 +18,16 @@
 
 查询所有数据库：
 `SHOW DATABASES;`
+
 查询当前数据库：
 `SELECT DATABASE();`
+
 创建数据库：
 `CREATE DATABASE [ IF NOT EXISTS ] 数据库名 [ DEFAULT CHARSET 字符集] [COLLATE 排序规则 ];`
+
 删除数据库：
 `DROP DATABASE [ IF EXISTS ] 数据库名;`
+
 使用数据库：
 `USE 数据库名;`
 
@@ -35,8 +39,10 @@
 
 查询当前数据库所有表：
 `SHOW TABLES;`
+
 查询表结构：
 `DESC 表名;`
+
 查询指定表的建表语句：
 `SHOW CREATE TABLE 表名;`
 
@@ -54,13 +60,16 @@ CREATE TABLE 表名(
 
 添加字段：
 `ALTER TABLE 表名 ADD 字段名 类型(长度) [COMMENT 注释] [约束];`
-例：`ALTER TABLE emp ADD nickname varchar(20) COMMENT '昵称';`
+
+* 例：`ALTER TABLE emp ADD nickname varchar(20) COMMENT '昵称';`
 
 修改数据类型：
 `ALTER TABLE 表名 MODIFY 字段名 新数据类型(长度);`
+
 修改字段名和字段类型：
 `ALTER TABLE 表名 CHANGE 旧字段名 新字段名 类型(长度) [COMMENT 注释] [约束];`
-例：将emp表的nickname字段修改为username，类型为varchar(30)
+
+* 例：将emp表的nickname字段修改为username，类型为varchar(30)
 `ALTER TABLE emp CHANGE nickname username varchar(30) COMMENT '昵称';`
 
 删除字段：
@@ -71,6 +80,7 @@ CREATE TABLE 表名(
 
 删除表：
 `DROP TABLE [IF EXISTS] 表名;`
+
 删除表，并重新创建该表：
 `TRUNCATE TABLE 表名;`
 
@@ -80,11 +90,13 @@ CREATE TABLE 表名(
 
 指定字段：
 `INSERT INTO 表名 (字段名1, 字段名2, ...) VALUES (值1, 值2, ...);`
+
 全部字段：
 `INSERT INTO 表名 VALUES (值1, 值2, ...);`
 
 批量添加数据：
 `INSERT INTO 表名 (字段名1, 字段名2, ...) VALUES (值1, 值2, ...), (值1, 值2, ...), (值1, 值2, ...);`
+
 `INSERT INTO 表名 VALUES (值1, 值2, ...), (值1, 值2, ...), (值1, 值2, ...);`
 
 ##### 注意事项
@@ -96,7 +108,7 @@ CREATE TABLE 表名(
 
 修改数据：
 `UPDATE 表名 SET 字段名1 = 值1, 字段名2 = 值2, ... [ WHERE 条件 ];`
-例：
+* 例：
 `UPDATE emp SET name = 'Jack' WHERE id = 1;`
 
 删除数据：
@@ -126,10 +138,12 @@ LIMIT
 
 查询多个字段：
 `SELECT 字段1, 字段2, 字段3, ... FROM 表名;`
+
 `SELECT * FROM 表名;`
 
 设置别名：
 `SELECT 字段1 [ AS 别名1 ], 字段2 [ AS 别名2 ], 字段3 [ AS 别名3 ], ... FROM 表名;`
+
 `SELECT 字段1 [ 别名1 ], 字段2 [ 别名2 ], 字段3 [ 别名3 ], ... FROM 表名;`
 
 去除重复记录：
@@ -137,6 +151,7 @@ LIMIT
 
 转义：
 `SELECT * FROM 表名 WHERE name LIKE '/_张三' ESCAPE '/'`
+
 / 之后的\_不作为通配符
 
 #### 条件查询
@@ -210,7 +225,8 @@ select * from employee where idcard like '%X';
 
 语法：
 `SELECT 聚合函数(字段列表) FROM 表名;`
-例：
+
+* 例：
 `SELECT count(id) from employee where workaddress = "广东省";`
 
 #### 分组查询
@@ -590,14 +606,19 @@ select e.name, d.name from employee as e inner join dept as d on e.dept = d.id;
 
 左外连接：
 查询左表所有数据，以及两张表交集部分数据
+
 `SELECT 字段列表 FROM 表1 LEFT [ OUTER ] JOIN 表2 ON 条件 ...;`
+
 相当于查询表1的所有数据，包含表1和表2交集部分数据
+
+- - -
 
 右外连接：
 查询右表所有数据，以及两张表交集部分数据
+
 `SELECT 字段列表 FROM 表1 RIGHT [ OUTER ] JOIN 表2 ON 条件 ...;`
 
-例子：
+* 例子：
 
 ```mysql
 -- 左
@@ -647,7 +668,9 @@ SELECT 字段列表 FROM 表B ...
 ### 子查询
 
 SQL语句中嵌套SELECT语句，称谓嵌套查询，又称子查询。
+
 `SELECT * FROM t1 WHERE column1 = ( SELECT column1 FROM t2);`
+
 **子查询外部的语句可以是 INSERT / UPDATE / DELETE / SELECT 的任何一个**
 
 根据子查询结果可以分为：
@@ -770,8 +793,10 @@ commit;
 
 开启事务：
 `START TRANSACTION 或 BEGIN TRANSACTION;`
+
 提交事务：
 `COMMIT;`
+
 回滚事务：
 `ROLLBACK;`
 
@@ -816,8 +841,10 @@ commit;
 
 查看事务隔离级别：
 `SELECT @@TRANSACTION_ISOLATION;`
+
 设置事务隔离级别：
 `SET [ SESSION | GLOBAL ] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE };`
+
 SESSION 是会话级别，表示只针对当前会话有效，GLOBAL 表示对所有会话有效
 
 # 进阶篇
@@ -933,7 +960,8 @@ Memory 引擎的表数据是存储在内存中的，受硬件问题、断电问�
 
 查看当前数据库的 INSERT, UPDATE, DELETE, SELECT 访问频次：
 `SHOW GLOBAL STATUS LIKE 'Com_______';` 或者 `SHOW SESSION STATUS LIKE 'Com_______';`
-例：`show global status like 'Com_______'`
+
+* 例：`show global status like 'Com_______'`
 
 ### 慢查询日志
 
@@ -952,12 +980,16 @@ MySQL的慢查询日志默认没有开启，需要在MySQL的配置文件（/etc
 
 show profile 能在做SQL优化时帮我们了解时间都耗费在哪里。通过 have_profiling 参数，能看到当前 MySQL 是否支持 profile 操作：
 `SELECT @@have_profiling;`
+
 profiling 默认关闭，可以通过set语句在session/global级别开启 profiling：
 `SET profiling = 1;`
+
 查看所有语句的耗时：
 `show profiles;`
+
 查看指定query_id的SQL语句各个阶段的耗时：
 `show profile for query query_id;`
+
 查看指定query_id的SQL语句CPU的使用情况
 `show profile cpu for query query_id;`
 
@@ -1170,8 +1202,10 @@ drop index idx_user_email on tb_user;
 
 例如，使用索引：
 `explain select * from tb_user use index(idx_user_pro) where profession="软件工程";`
+
 不使用哪个索引：
 `explain select * from tb_user ignore index(idx_user_pro) where profession="软件工程";`
+
 必须使用哪个索引：
 `explain select * from tb_user force index(idx_user_pro) where profession="软件工程";`
 
@@ -1183,6 +1217,7 @@ use 是建议，实际使用哪个索引 MySQL 还会自己权衡运行速度去
 
 explain 中 extra 字段含义：
 `using index condition`：查找使用了索引，但是需要回表查询数据
+
 `using where; using index;`：查找使用了索引，但是需要的数据都在索引列中能找到，所以不需要回表查询
 
 如果在聚集索引中直接能找到对应的行，则直接返回行数据，只需要一次查询，哪怕是select \*；如果在辅助索引中找聚集索引，如`select id, name from xxx where name='xxx';`，也只需要通过辅助索引(name)查找到对应的id，返回name和name索引对应的id即可，只需要一次查询；如果是通过辅助索引查找其他字段，则需要回表查询，如`select id, name, gender from xxx where name='xxx';`
@@ -1199,6 +1234,7 @@ explain 中 extra 字段含义：
 当字段类型为字符串（varchar, text等）时，有时候需要索引很长的字符串，这会让索引变得很大，查询时，浪费大量的磁盘IO，影响查询效率，此时可以只降字符串的一部分前缀，建立索引，这样可以大大节约索引空间，从而提高索引效率。
 
 语法：`create index idx_xxxx on table_name(columnn(n));`
+
 前缀长度：可以根据索引的选择性来决定，而选择性是指不重复的索引值（基数）和数据表的记录总数的比值，索引选择性越高则查询效率越高，唯一索引的选择性是1，这是最好的索引选择性，性能也是最好的。
 求选择性公式：
 ```mysql
@@ -1339,6 +1375,7 @@ InnoDB 的行锁是针对索引加的锁，不是针对记录加的锁，并且�
 
 如以下两条语句：
 `update student set no = '123' where id = 1;`，这句由于id有主键索引，所以只会锁这一行；
+
 `update student set no = '123' where name = 'test';`，这句由于name没有索引，所以会把整张表都锁住进行数据更新，解决方法是给name字段添加索引
 
 # 数据类型
