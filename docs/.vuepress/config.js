@@ -35,7 +35,7 @@ module.exports = {
             { text: '项目', link: '/Java/项目/项目' },
           ]
         },  
-        { text: 'MySQL', link: '/MySQL/MySQL_基础篇' },
+        { text: 'MySQL', link: '/MySQL/MySQL基础篇' },
         { text: 'GitHub', link: 'https://github.com' },
       ],
     }
